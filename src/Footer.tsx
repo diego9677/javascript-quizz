@@ -11,8 +11,8 @@ const useQuestionsData = () => {
   questions.forEach(q => {
     const { userSelectedAnswer, correctAnswer } = q;
     if (userSelectedAnswer === undefined) unanswer++;
-    if (userSelectedAnswer === correctAnswer) correct++;
-    if (userSelectedAnswer !== correctAnswer) incorrect++;
+    else if (userSelectedAnswer === correctAnswer) correct++;
+    else incorrect++;
   });
 
   return { correct, incorrect, unanswer };
